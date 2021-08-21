@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Expanded(
-                flex: 3,
+                flex: 8,
                 child: Container(
                   child: Center(
                     child: Stack(
@@ -53,18 +53,94 @@ class Home extends StatelessWidget {
                 ),
             ),
             Expanded(
-              flex: 3,
+              flex: 5,
+              child: Container(
+                child: Container(
+                  child: Center(
+                    child: Stack(
+                      children: <Widget>[
+                        Text(
+                          'Blood Sugar level: 6.1 mmol/L',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            foreground: Paint()
+                              ..style = PaintingStyle.stroke
+                              ..strokeWidth = 9
+                              ..color = Colors.black,
+                          ),
+                        ),
+                        Text(
+                          'Blood Sugar level: 6.1 mmol/L',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 1,
               child: Container(
 
               ),
             ),
             Expanded(
-              flex: 3,
+              flex: 2,
+              child: Container(
+                  alignment: Alignment(1.0, 1.0) ,
+                  color: Colors.white,
+                  child: TextFormField(
+                        decoration: InputDecoration(
+                            fillColor: Colors.white,
+                            focusColor: Colors.white,
+                            border: UnderlineInputBorder(),
+                            hintText: '   # of carbs in your next meal'
+                        ),
+                    keyboardType: TextInputType.number,
+                    ),
+
+                  ),
+
+              ),
+
+            Expanded(
+              flex: 2,
               child: Container(
 
               ),
             ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                child: Container(
+                  alignment: Alignment(1.0, 1.0) ,
+                  color: Colors.white,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                        fillColor: Colors.white,
+                        focusColor: Colors.white,
+                        border: UnderlineInputBorder(),
+                        hintText: '   Maunally update blood sugar'
+                    ),
+                    keyboardType: TextInputType.number,
+                  ),
 
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 8,
+              child: Container(
+
+              ),
+            ),
           ],
         ),
       ),
@@ -73,7 +149,7 @@ class Home extends StatelessWidget {
 
 
       floatingActionButton: FloatingActionButton(
-        child: Text('click'),
+        child: Icon(Icons.arrow_forward),
         backgroundColor: Colors.blue[600],
         onPressed: () {},
       ),
