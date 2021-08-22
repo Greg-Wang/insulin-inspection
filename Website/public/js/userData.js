@@ -18,7 +18,7 @@ function displayBloodSugar(){
     let bloodSugarLevel = document.getElementById("blood-sugar");
     let warning = document.getElementById("warning");
 
-    bloodSugarLevel.innerHTML = "Blood Sugar Level: " + currentBloodSugar + "mmol/L";
+    bloodSugarLevel.innerHTML = "Blood Sugar Level: " + currentBloodSugar + " mmol/L";
     if(currentBloodSugar < minBloodSugar || currentBloodSugar > maxBloodSugar){
         warning.innerHTML = "Your current blood sugar level lies outside the normal range of 4-8 mmol/L. Consider seeing a health professional immediately."
         bloodSugarLevel.style.color = 'red';
