@@ -66,7 +66,7 @@ class Home extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             foreground: Paint()
                               ..style = PaintingStyle.stroke
-                              ..strokeWidth = 9
+                              ..strokeWidth = 6
                               ..color = Colors.black,
                           ),
                         ),
@@ -136,7 +136,38 @@ class Home extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 8,
+              flex: 6,
+              child: Container(
+                child: Center(
+                  child: Stack(
+                    children: <Widget>[
+                      Text(
+                        'Press the arrow on the right to proceed',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          foreground: Paint()
+                            ..style = PaintingStyle.stroke
+                            ..strokeWidth = 6
+                            ..color = Colors.black,
+                        ),
+                      ),
+                      Text(
+                        'Press the arrow on the right to proceed',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
               child: Container(
 
               ),
