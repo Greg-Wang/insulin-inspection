@@ -136,7 +136,7 @@
   text-align: left;
   width: 50%;
   margin: auto;
-  margin-top: 5em;
+  margin-top: 7%;
   border-style: solid;
   border-color: black;
   border-radius: 2em;
@@ -299,5 +299,67 @@ button:hover {
   }
   to {
     opacity: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #title {
+    font-size: 2em;
+  }
+  #inputs-container {
+    margin-top: 30%;
+    width: 70%;
+  }
+  #inputs-container h1 {
+    font-size: 1.2em;
+    margin: 0 5px;
+  }
+  #inputs-container p {
+    font-size: 0.75em;
+    margin: 0 10px;
+    margin-top: 5px;
+  }
+  #track-meal {
+    margin-top: 40%;
+    margin-left: 15%;
+    width: 70%;
+    height: 10%;
+  }
+  #track-meal p {
+    font-size: 1.2em;
+  }
+  #track-meal input {
+    width: 30%;
+  }
+  #track-meal button {
+    width: 50%;
+    font-size: 1em;
+  }
+  #input-insulin {
+    margin-top: 60%;
+    margin-left: 15%;
+    width: 70%;
+    height: 10%;
+  }
+  #input-insulin p {
+    font-size: 1.2em;
+  }
+  #input-insulin input {
+    width: 30%;
+  }
+  #input-insulin button {
+    width: 50%;
+    font-size: 1em;
+  }
+  button {
+    font-size: 1em;
+  }
+  @keyframes extend {
+    from {
+      height: 10%;
+    }
+    to {
+      height: 20%;
+    }
   }
 }
