@@ -1,0 +1,324 @@
+@import "utilities/colours";
+
+* {
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.container {
+    width: 100%;
+    height: 300%;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+}
+
+.page{
+    width: 100%;
+    height: 33.33333%;
+    margin:0;
+    background-color: $prim-b;
+}
+
+.page:nth-child(2){
+    background-color: $prim-g;
+}
+
+#title {
+    font-family: "Space Mono", monospace;
+    width: 100%;
+    margin: auto;
+    color: $prim-g;
+    font-size: 5em;
+    vertical-align: middle;
+    text-shadow: -5px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -4px -1px 0 #000;
+    animation: 1s slide-down ease-in-out forwards;
+}
+
+#input-insulin{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 10%;
+    margin:auto;
+    background-color: white;
+    margin-left: 25%;
+    margin-top:15%;
+
+    border-style: solid;
+    border-color: black;
+    border-radius: 2em;
+    border-width: 0.2em;
+
+    box-shadow: 0 0 0 0.5em $prim-g, 0 0 0 0.7em black;
+    text-align: center;
+    padding-bottom: 2%;
+
+    p{
+        margin-top: 10%;
+        margin-left: 10px;
+        font-family: "Space Mono", monospace;
+        font-size: 1.5em;
+    }
+
+    input{
+        float:inline-start;
+        outline:none;
+        border:none;
+        font-family: "Space Mono", monospace;
+        font-size: 1.5em;
+        text-align: center;
+        border-bottom: solid 2px $prim-g;
+        margin-right: 20px;
+    }
+
+    button{
+        margin-left:0;
+        margin-bottom: 20px;
+        box-shadow: 0 0 0 0.2em $prim-g, 0 0 0 0.3em black;
+
+        &:hover {
+            text-shadow: -3px 2px $prim-b;
+            box-shadow: 0 0 0 0.2em $prim-b, 0 0 0 0.3em black;
+        }
+    }
+}
+
+#track-meal{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 5%;
+    margin:auto;
+    background-color: white;
+    margin-left: 25%;
+    margin-top:10%;
+
+    border-style: solid;
+    border-color: black;
+    border-radius: 2em;
+    border-width: 0.2em;
+
+    box-shadow: 0 0 0 0.5em $prim-b, 0 0 0 0.7em black;
+    text-align: center;
+    padding-bottom: 2%;
+
+    p{
+        margin-top: 20px;
+        margin-left: 10px;
+        font-family: "Space Mono", monospace;
+        font-size: 1.5em;
+    }
+
+    input{
+        float:inline-start;
+        outline:none;
+        border:none;
+        font-family: "Space Mono", monospace;
+        font-size: 1.5em;
+        text-align: center;
+        border-bottom: solid 2px $prim-b;
+        margin-right: 20px;
+    }
+
+    button{
+        margin-left:0;
+        margin-bottom: 20px;
+        box-shadow: 0 0 0 0.2em $prim-b, 0 0 0 0.3em black;
+
+        &:hover {
+            text-shadow: -3px 2px $prim-g;
+            box-shadow: 0 0 0 0.2em $prim-g, 0 0 0 0.3em black;
+        }
+    }
+    
+}
+
+#inputs-container {
+    animation: 1s fade-in ease-in-out forwards;
+    text-align: left;
+    width: 50%;
+    margin: auto;
+    margin-top: 5em;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2em;
+    border-width: 0.2em;
+
+    box-shadow: 0 0 0 0.5em $prim-g, 0 0 0 0.7em black;
+
+    background-color: white;
+
+    transition: top 1s linear;
+
+    h1{
+        font-family: "Space Mono", monospace; 
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    #warning{
+        font-family: "Space Mono", monospace; 
+        font-size: 0.75em;
+        text-align: center;
+    }
+   
+}
+
+button {
+    font-family: "Space Mono", monospace;
+    width: 50%;
+    margin-left: 23%;
+    bottom: 1px;
+    margin-top: 50px;
+
+    &:nth-child(odd){
+        margin-bottom: 50px;
+    }    
+
+    border: solid 0.1em black;
+    border-radius: 5em;
+
+    box-shadow: 0 0 0 0.2em $prim-g, 0 0 0 0.3em black;
+    font-size: 2em;
+
+    padding: 0.1em 1em;
+
+    color: black;
+    &:hover {
+        text-shadow: -3px 2px $prim-b;
+        box-shadow: 0 0 0 0.2em $prim-b, 0 0 0 0.3em black;
+    }
+}
+
+#submit{
+    width: 25%;
+    font-size: 1.5em;
+
+    border: solid 0.1em black;
+    border-radius: 5em;
+
+    box-shadow: 0 0 0 0.2em $prim-b, 0 0 0 0.3em black;
+
+    padding: 0.1em 0.5em;
+
+    color: black;
+    &:hover {
+        text-shadow: -3px 2px $prim-b;
+        box-shadow: 0 0 0 0.2em $prim-g, 0 0 0 0.3em black;
+    }
+}
+
+#back-to-top{
+    margin-left: 0;
+    margin-bottom: 0;
+    background-color: white;
+}
+
+
+
+.row {
+    margin-bottom: 1em;
+}
+
+#results{
+    margin:0;
+    padding:0;
+    position: relative;
+    top: 20.5%;
+    width: 100%;
+    height: 50%;
+
+}
+
+.result{
+    width: 30%;
+    height: 80%;
+    margin: 40px 21px;
+    background-color: white;
+    float:left;
+    vertical-align: middle;
+    border: solid black 2px;
+    border-radius: 2em;
+    box-shadow: 0 0 0 0.2em $prim-b, 0 0 0 0.3em black;
+    color: $prim-b;
+    &:nth-child(odd){
+        box-shadow: 0 0 0 0.2em $prim-g, 0 0 0 0.3em black;
+        h1{
+            color: $prim-g;
+        }
+    }
+
+    h1{
+        font-family: "Space Mono", monospace;
+        font-size: 3em;
+        margin-top: 30px;
+        text-shadow: -4px 1px 0px #000, 1px 1px 0 #000, 1px -1px 0 #000, -2px -1px 0 #000;
+    }
+
+    p{
+        padding: 50px;
+        font-size: 1.5em;
+    }
+
+   
+}
+
+#appear-on-extend{
+    opacity: 0;
+}
+
+.extend{
+    animation: 0.75s extend ease-in-out forwards;
+}
+
+.appear{
+    animation: 1.2s appear ease-in-out forwards;
+}
+
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-3em);
+    }
+    70% {
+        transform: translateY(0.5em);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0%;
+    }
+    50% {
+        opactiy: 30%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes extend{
+    from{
+        height: 5%;
+    }
+    to{
+        height: 12%;
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }    
+    to{
+        opacity: 100%;
+    }
+}

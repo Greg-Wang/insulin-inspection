@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insulin Inspector</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/indexStyle.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        
+
+        <div class="page">
+            <h1 id="title">Insulin Inspector</h1>
+            <div id="inputs-container">
+                <div class="row">
+                    <h1 id="blood-sugar">Blood Sugar Level: </h1>
+                    <p id="warning"></p>
+                </div>
+                <button onClick="trackMeal()" id="track">Track A Meal</button>
+                <button onClick="inputBloodSugar()" id="blood-sugar">Update Blood Sugar </button>
+
+            </div>
+        </div>
+
+
+        <div class="page">
+            <div id="track-meal">
+                <p>How many grams of carbohydrates are in this meal?</p>
+                <input type="number" name="carbs" value="0" min="0" id="carb-input">
+                <button onClick="getInsulin()" id="submit">Submit</button>
+
+                <div id="appear-on-extend">
+                    <p id="insulin-suggestion"></p>
+                    <button onClick="backToTop()" class="toTopButton">Back To Top</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="page">
+            <div id="input-insulin">
+                <p>Enter your current blood sugar level in mmol/L</p>
+                <input type="number" name="blood-sugar" value="0" min="0" id="blood-sugar-input">
+                <button onClick="updateBloodSugar()" id="updateBloodSugar">Submit</button>                
+                
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="js/userData.js"></script>
+
+    <script defer src="/__/firebase/8.4.3/firebase-app.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-performance.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+</body>
+
+</html>
